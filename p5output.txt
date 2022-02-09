@@ -1,1 +1,4 @@
-
+gcc -g p5original.c
+ ./a.out
+Enter any two numbers to find HCF: 6 3
+HCF of 6 and 3 = 3
