@@ -1,1 +1,13 @@
+gcc -g p1original.c
+ ./a.out
+Enter the height of the Triangle:
+ 7
+Enter the base of the Triangle:
+ 4
+The area of the triangle with base 7 and height 4  is: 14.000000 ^C
+ 
 
+
+
+  
+  
