@@ -1,21 +1,44 @@
 #include <stdio.h>
-  int main()
-  {
-  int a,b,c;
-  printf("Enter the three sides of triangle\n");
-  scanf("%d%d%d",&a,&b,&c);
+int input_side()
+{
+  int side;
+  printf("enter the side of the triangle :\n");
+  scanf("%d",&side);
+  return side;
+}
 
-  if(a==b && a==c)
+int check_scalene(int a,int b,int c)
+{
+  if (a!=b && b!=c && a!=c)
   {
-    printf("The triangle is not scalene");
+    return 1;
   }
-  else if(a==b && b!=c)
-    {
-    printf("The triangle is not scalene");
-    }
-    else
-   {
-    printf("The triangle is  scalene");
-   }
+  else 
+  {
+    return 2;
+  }
+}
+
+void output(int a,int b,int c,int isscalene)
+{
+ if (isscalene==1)
+ {
+   printf("the triangle is scalene \n");
+ }  
+ else
+ {
+   printf("the triangle is not scalene\n");
  }
+}
+
+int main()
+{
+  int x,y,z,isscalene;
+  x=input_side();
+  y=input_side();
+  z=input_side();
+  isscalene=check_scalene(x,y,z);
+  output(x,y,z,isscalene);
+  return 0;
+}
   

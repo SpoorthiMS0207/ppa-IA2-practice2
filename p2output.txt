@@ -1,10 +1,13 @@
- gcc -g p2original.c
+
+
+gcc -g p2original.c
  ./a.out
-Enter the three sides of triangle
-4 5 7
-The triangle is  scalene 
-
-
-
+enter the side of the triangle :
+4
+enter the side of the triangle :
+5
+enter the side of the triangle :
+6
+the triangle is scalene
 
 
