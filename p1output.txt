@@ -1,12 +1,9 @@
 gcc -g p1original.c
  ./a.out
-Enter the height of the Triangle:
- 7
-Enter the base of the Triangle:
- 4
-The area of the triangle with base 7 and height 4  is: 14.000000 ^C
+enter the base and height of the triangle :
+5 7
+the area of the triangle with base 5.000000 and height 7.000000 is 17.500000 
  
-
 
 
   
