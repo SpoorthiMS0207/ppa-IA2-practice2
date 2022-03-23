@@ -33,12 +33,12 @@ void output(int a,int b,int c,int isscalene)
 
 int main()
 {
-  int x,y,z,isscalene;
-  x=input_side();
-  y=input_side();
-  z=input_side();
-  isscalene=check_scalene(x,y,z);
-  output(x,y,z,isscalene);
+  int a,b,c,scalene;
+  a=input_side();
+  b=input_side();
+  c=input_side();
+  scalene=check_scalene(a,b,c);
+  output(a,b,c,scalene);
   return 0;
 }
   

@@ -1,21 +1,38 @@
 #include <stdio.h>
-
+int input()
+{
+  int num;
+  printf("Enter a number:\n");
+  scanf("%d", &num);
+  return num;
+}
+int gcd(int a, int b)
+{
+    int large = a > b ? a : b;
+    int small = a < b ? a : b;
+    int i = 1;
+    int rem = 1;
+    while (rem)
+    {
+        rem = large - i * small;
+        if (rem < small)
+        {
+            large = small;
+            small = rem;
+            i = 0;
+        }
+        i++;
+    }
+    return large;
+}
+void output(int a, int b, int gcd)
+{
+  printf("The gcd of %d and %d is %d\n", a, b, gcd);
+}
 int main()
 {
-    int i, num1, num2, min, hcf=1;
-    printf("Enter any two numbers to find HCF: ");
-    scanf("%d%d", &num1, &num2);
-    min = (num1<num2) ? num1 : num2;
-
-    for(i=1; i<=min; i++)
-    {
-        if(num1%i==0 && num2%i==0)
-        {
-            hcf = i;
-        }
-    }
-
-    printf("HCF of %d and %d = %d\n", num1, num2, hcf);
-
-    return 0;
-}
+  int num1 = input();
+  int num2 = input();
+  int res = gcd(num1, num2);
+  output(num1, num2, res);
+  return 0;
